@@ -141,8 +141,8 @@ function addTarget(kind,id,x,y,z,color,level){
  targets.push({kind,id,group,done:false,level});
 }
 THEMES.forEach(([name,color],i)=>{const a=i*Math.PI*2/THEMES.length,r=29+i%3*2;addTarget('HOUSE',name,Math.cos(a)*r,0,Math.sin(a)*r,color,1)});
-for(let i=0;i<12;i++){const a=i*Math.PI/6;addTarget('CITY ISLAND','DISTRICT '+(i+1),Math.cos(a)*70,0,kingdomZ+Math.sin(a)*70,0x48dfff,2)}
-for(let i=0;i<8;i++){const a=i*Math.PI/4;addTarget('BRANCH','BRANCH '+(i+1),Math.cos(a)*34,10,kingdomZ+Math.sin(a)*34,0x72e58b,3)}
+for(let i=0;i<12;i++){const a=i*Math.PI/6;addTarget('CITY ISLAND','DISTRICT '+(i+1),Math.cos(a)*70+5,0,kingdomZ+Math.sin(a)*70+5,0x48dfff,2)}
+for(let i=0;i<8;i++){const a=i*Math.PI/4;addTarget('BRANCH','BRANCH '+(i+1),Math.cos(a)*34+5.2,10,kingdomZ+Math.sin(a)*34,0x72e58b,3)}
 for(let i=0;i<6;i++)addTarget('TEST TUBE','SPECIMEN '+(i+1),-8+i*3,-18,-4,0x55eaff,4);
 
 return{platforms,islands,robots,shots,targets}}
