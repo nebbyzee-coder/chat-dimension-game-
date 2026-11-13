@@ -38,3 +38,9 @@
 .level-bar button.locked,.level-bar button:disabled{opacity:.32;filter:grayscale(.85);cursor:not-allowed;border-style:dashed;position:relative}
 .level-bar button.locked::after{content:"🔒";display:block;font-size:10px;margin-top:2px}
 .level-bar button:not(:disabled){opacity:1}
+
+/* 1.8.0: furnished interiors and combat feedback */
+.hud .stats{border-color:#66dfff99;box-shadow:0 0 22px #19bfff24,inset 0 0 18px #0b315522}
+.message{z-index:25;max-width:min(92vw,720px);white-space:normal;line-height:1.25}
+.level-bar button:disabled{pointer-events:none}
+@media(max-width:650px){.stats{max-width:calc(100vw - 16px)}.help{max-width:170px}}
