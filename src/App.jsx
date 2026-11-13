@@ -34,6 +34,20 @@ for(let i=0;i<12;i++){
  for(let side of [-1,1])box(village,side*2,2.6,2.6,1.1,1.1,.12,window);
  for(let side of [-1,1]){cyl(village,side*5,.8,-2,.22,.28,1.6,thatch,8);let lamp=new THREE.Mesh(new THREE.SphereGeometry(.18,8,8),window);lamp.position.set(side*5,1.8,-2);village.add(lamp)}
 }
+// Stepping-stone bridges let the player travel between districts and level rings.
+for(let ring of [{r:125,count:12,y:.25,size:5.3},{r:70,count:12,y:.28,size:5.1}]){
+ for(let i=0;i<ring.count;i++){
+  const a=i*Math.PI*2/ring.count,b=(i+1)*Math.PI*2/ring.count;
+  for(let j=1;j<=5;j++){
+   const t=j/6,ang=a+(b-a)*t,rr=ring.r;
+   box(scene,Math.cos(ang)*rr,ring.y,kingdomZ+Math.sin(ang)*rr,ring.size,.42,ring.size,M(0x3a5366,.5,.65),true);
+  }
+ }
+}
+// A continuous approach runs from the Village ring, through the City, and up to the Treehouse halo.
+for(let j=1;j<11;j++){let r=125-j*5.1;box(scene,-r,.28,-145,4.8,.42,4.8,M(0x486174,.48,.65),true)}
+for(let j=1;j<8;j++){let r=70-j*5.0,y=.3+j*1.35;box(scene,-r,y,-145,4.8,.42,4.8,M(0x486174,.48,.65),true)}
+for(let j=1;j<6;j++){let r=34-j*5.0,y=10-j*1.65;box(scene,-r,y,-145,4.8,.42,4.8,M(0x765039,.55,.35),true)}
 for(let i=0;i<8;i++){
  const a=i*Math.PI/4, x=Math.cos(a)*34, z=kingdomZ+Math.sin(a)*34;
  const tree=island('TREEHOUSE HALO '+(i+1),0x4d9b58,x,z,8,10);
