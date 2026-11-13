@@ -1,4 +1,4 @@
-const CACHE='chat-dimension-v1.7.0';
+const CACHE='chat-dimension-v1.8.0';
 const SHELL=['./','./index.html','./manifest.webmanifest','./icon.svg','./icon-180.png'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL)));self.skipWaiting();});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim()));});
