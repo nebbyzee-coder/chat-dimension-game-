@@ -6,3 +6,7 @@
 .title{top:66px}
 .stats{top:108px}
 @media(max-width:650px){.level-bar{top:5px;gap:3px;width:calc(100vw - 8px);justify-content:center}.level-bar button{min-width:0;flex:1;padding:6px 2px;font-size:9px}.level-bar button small{font-size:7px;letter-spacing:-.2px}.title{top:48px}.stats{top:88px}.help{top:48px}}
+
+/* Level rings and cinematic arrival treatment */
+.level-bar button{backdrop-filter:blur(10px)}
+.message{padding:14px 20px;border:1px solid #70e7ff88;border-radius:14px;background:#06182de8;box-shadow:0 0 28px #21caff55;letter-spacing:1px}
