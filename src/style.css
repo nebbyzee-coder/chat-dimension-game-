@@ -44,3 +44,15 @@
 .message{z-index:25;max-width:min(92vw,720px);white-space:normal;line-height:1.25}
 .level-bar button:disabled{pointer-events:none}
 @media(max-width:650px){.stats{max-width:calc(100vw - 16px)}.help{max-width:170px}}
+
+
+/* 1.9.0 live graphics quality selector */
+.graphics-button{position:absolute;right:12px;top:158px;z-index:14;pointer-events:auto;padding:9px 13px;border:1px solid #ffcf78aa;border-radius:12px;background:#211b19ee;color:#ffe3a6;font-size:12px;font-weight:900;box-shadow:0 5px 18px #0009,0 0 16px #ffbd4a22;touch-action:manipulation}
+.graphics-panel{display:none;position:absolute;right:12px;top:204px;z-index:16;width:min(270px,calc(100vw - 24px));padding:14px;border:1px solid #ffcf78aa;border-radius:14px;background:#09192bed;box-shadow:0 8px 28px #000b,0 0 22px #ffbd4a22;backdrop-filter:blur(12px);pointer-events:auto}
+.graphics-panel.open{display:block}
+.graphics-panel>b{display:block;color:#ffe0a0;font-size:12px;letter-spacing:.8px}
+.graphics-panel p{margin:5px 0 11px;color:#b9cad8;font-size:11px}
+.graphics-options{display:grid;grid-template-columns:1fr;gap:7px}
+.graphics-options button{min-height:37px;padding:7px 10px;text-align:left;font-size:11px;border-radius:9px;background:#0d2942;border-color:#6dddf777}
+.graphics-options button.selected{background:#18506a;border-color:#9af0ff;box-shadow:0 0 14px #3ddfff55;color:#fff}
+@media(max-width:650px){.graphics-button{top:184px;right:8px;padding:8px 10px;font-size:10px}.graphics-panel{top:226px;right:8px;width:min(250px,calc(100vw - 16px))}}
