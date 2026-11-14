@@ -56,3 +56,19 @@
 .graphics-options button{min-height:37px;padding:7px 10px;text-align:left;font-size:11px;border-radius:9px;background:#0d2942;border-color:#6dddf777}
 .graphics-options button.selected{background:#18506a;border-color:#9af0ff;box-shadow:0 0 14px #3ddfff55;color:#fff}
 @media(max-width:650px){.graphics-button{top:184px;right:8px;padding:8px 10px;font-size:10px}.graphics-panel{top:226px;right:8px;width:min(250px,calc(100vw - 16px))}}
+
+/* 1.10.0 unified settings menu */
+.settings-button{position:absolute;right:12px;top:158px;z-index:17;pointer-events:auto;padding:9px 13px;border:1px solid #ffcf78aa;border-radius:12px;background:linear-gradient(145deg,#302519ee,#111b2bee);color:#ffe3a6;font-size:12px;font-weight:900;letter-spacing:.5px;box-shadow:0 5px 18px #0009,0 0 18px #ffbd4a33;touch-action:manipulation}
+.settings-panel{display:none;position:absolute;right:12px;top:204px;z-index:18;width:min(270px,calc(100vw - 24px));padding:14px;border:1px solid #ffcf78bb;border-radius:15px;background:#09192bf2;box-shadow:0 8px 28px #000c,0 0 24px #ffbd4a2b;backdrop-filter:blur(14px);pointer-events:auto}
+.settings-panel.open{display:block}
+.settings-panel>b{display:block;margin-bottom:12px;color:#ffe0a0;font-size:13px;letter-spacing:1px}
+.settings-group{padding:10px 0;border-top:1px solid #75dfff33}
+.settings-group>span{display:block;margin-bottom:7px;color:#8deaff;font-size:11px;font-weight:900;letter-spacing:.7px}
+.settings-group p{margin:4px 0 10px;color:#b9cad8;font-size:11px}
+.overlay-toggle{width:100%;min-height:38px;padding:7px 10px;text-align:center;font-size:11px;border-radius:9px;background:#123b50;border-color:#72e5ff88}
+.overlay-toggle.selected{background:#18506a;border-color:#9af0ff;box-shadow:0 0 14px #3ddfff55}
+.settings-panel .graphics-options{display:grid;grid-template-columns:1fr;gap:7px}
+.settings-panel .graphics-options button{min-height:37px;padding:7px 10px;text-align:left;font-size:11px;border-radius:9px;background:#0d2942;border-color:#6dddf777}
+.settings-panel .graphics-options button.selected{background:#18506a;border-color:#9af0ff;box-shadow:0 0 14px #3ddfff55;color:#fff}
+.hud.overlays-hidden>:not(.settings-button):not(.settings-panel){display:none!important}
+@media(max-width:650px){.settings-button{top:184px;right:8px;padding:8px 10px;font-size:10px}.settings-panel{top:226px;right:8px;width:min(250px,calc(100vw - 16px))}}
