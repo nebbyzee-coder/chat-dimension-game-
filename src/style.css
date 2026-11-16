@@ -80,5 +80,5 @@
 .settings-panel .howto-menu-button{width:100%;min-height:42px;padding:9px 12px;background:linear-gradient(145deg,#14516d,#0b2942);border-color:#83eaff;color:#f1fcff;font-size:12px}
 .settings-panel .graphics-options button{min-height:42px}
 .howto-button,.graphics-button,.graphics-panel,.panel.help{display:none!important}
-.hud.overlays-hidden>:not(.settings-button):not(.settings-panel):not(.controls){display:none!important}
+.hud.overlays-hidden>:not(.settings-button):not(.settings-panel):not(.controls):not(.howto-modal){display:none!important}
 @media(max-width:650px){.settings-button{top:max(8px,env(safe-area-inset-top))!important;right:8px!important}.settings-panel{top:calc(max(8px,env(safe-area-inset-top)) + 52px)!important;right:8px!important;width:min(280px,calc(100vw - 16px))!important}}
