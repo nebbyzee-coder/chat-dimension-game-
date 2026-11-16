@@ -72,3 +72,13 @@
 .settings-panel .graphics-options button.selected{background:#18506a;border-color:#9af0ff;box-shadow:0 0 14px #3ddfff55;color:#fff}
 .hud.overlays-hidden>:not(.settings-button):not(.settings-panel){display:none!important}
 @media(max-width:650px){.settings-button{top:184px;right:8px;padding:8px 10px;font-size:10px}.settings-panel{top:226px;right:8px;width:min(250px,calc(100vw - 16px))}}
+
+
+/* v1.11.0: clean screen, one top-right settings menu, and vision presets */
+.settings-button{top:10px!important;right:10px!important;z-index:40!important;min-height:44px;padding:10px 15px!important;font-size:13px!important}
+.settings-panel{top:62px!important;right:10px!important;z-index:41!important;width:min(300px,calc(100vw - 20px))!important;max-height:calc(100dvh - 78px);overflow-y:auto}
+.settings-panel .howto-menu-button{width:100%;min-height:42px;padding:9px 12px;background:linear-gradient(145deg,#14516d,#0b2942);border-color:#83eaff;color:#f1fcff;font-size:12px}
+.settings-panel .graphics-options button{min-height:42px}
+.howto-button,.graphics-button,.graphics-panel,.panel.help{display:none!important}
+.hud.overlays-hidden>:not(.settings-button):not(.settings-panel):not(.controls){display:none!important}
+@media(max-width:650px){.settings-button{top:max(8px,env(safe-area-inset-top))!important;right:8px!important}.settings-panel{top:calc(max(8px,env(safe-area-inset-top)) + 52px)!important;right:8px!important;width:min(280px,calc(100vw - 16px))!important}}
